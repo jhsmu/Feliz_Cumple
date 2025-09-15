@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>🎂 Feliz Cumpleaños Para Ti 🎉</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Fondo -->
+  <canvas id="stars-canvas"></canvas>
+
+  <!-- Contenido -->
+  <main id="app">
+    <!-- SECCIÓN 1 -->
+    <section class="content-section">
+      <h1 class="carousel-text">🎉 Feliz Cumpleaños 🎂</h1>
+      <img src="img/Cumpleañera.jpeg" alt="Cumpleaños" class="birthday-img">
+      <h1 class="carousel-text">Valentina 💖</h1>
+    </section>
+
+<!-- SECCIÓN 2 -->
+<section class="content-section section-2">
+    <div class="left">
+      <h2>🎊 Te deseo un feliz cumpleaños lleno de alegría 🎉</h2>
+      <p>
+        Que todos tus sueños se hagan realidad y que esta nueva vuelta al sol esté
+        cargada de momentos mágicos 💖
+      </p>
+    </div>
+  
+    <!-- Columna derecha: animación Lottie -->
+    <div class="right" id="cake-animation"></div>
+  </section>
+
+    <!-- SECCIÓN 3 -->
+    <section class="content-section">
+        <h2>👉 Toca cada parte de la imagen para descubrir la sorpresa 🎁</h2>
+        <div class="gallery">
+            <!-- Bloque 1 -->
+            <div class="image-block block1">
+              <div class="lottie animations"><div class="anim-box" id="ramo2-animation"></div></div>
+              <div class="image-container">
+                <div class="card part1"><div class="front"></div><div class="back">🎉 Parte 1</div></div>
+                <div class="card part2"><div class="front"></div><div class="back">💖 Parte 2</div></div>
+                <div class="card part3"><div class="front"></div><div class="back">🌸 Parte 3</div></div>
+                <div class="card part4"><div class="front"></div><div class="back">✨ Parte 4</div></div>
+              </div>
+            </div>
+        
+            <!-- Bloque 2 -->
+            <div class="image-block block2">
+              <div class="lottie animations"><div class="anim-box" id="ramo1-animation"></div></div>
+              <div class="image-container">
+                <div class="card part1"><div class="front"></div><div class="back">🎉 Parte 1</div></div>
+                <div class="card part2"><div class="front"></div><div class="back">💖 Parte 2</div></div>
+                <div class="card part3"><div class="front"></div><div class="back">🌸 Parte 3</div></div>
+                <div class="card part4"><div class="front"></div><div class="back">✨ Parte 4</div></div>
+              </div>
+            </div>
+        
+            <!-- Bloque 3 -->
+            <div class="image-block block3">
+              <div class="lottie animations">
+                <div class="anim-box" id="ramo3-animation"></div>
+              </div>
+              <div class="image-container">
+                <div class="card part1"><div class="front"></div><div class="back">🎉 Parte 1</div></div>
+                <div class="card part2"><div class="front"></div><div class="back">💖 Parte 2</div></div>
+                <div class="card part3"><div class="front"></div><div class="back">🌸 Parte 3</div></div>
+                <div class="card part4"><div class="front"></div><div class="back">✨ Parte 4</div></div>
+              </div>
+            </div>
+          </div>
+    </section>
+    <!-- SECCIÓN 4 -->
+    <section class="content-section">
+      <div class="overlay-container">
+        <div class="overlay-slider">
+          <span style="--i:1">
+            <img src="./img/gatoconbotas.jpg" alt="">
+            <div class="message">Una vida junto a ti, es todo lo que puedo desear</div>
+          </span>
+          <span style="--i:2">
+            <img src="./img/sherkyfiona.jpg" alt="">
+            <div class="message">Yo vi esta flor y pense en ti porque... Es bonita, bueno en realidad a mi no me gusta pero crei que te gustaria porque... Tu si eres bonita</div>
+          </span>
+          <span style="--i:3">
+            <img src="./img/mavisyjhonatan.jpg" alt="">
+            <div class="message">Eres mi click</div>
+          </span>
+          <span style="--i:4">
+            <img src="./img/aguayfuego.jpg" alt="">
+            <div class="message">Esa luz dentro de ti ha hecho que me sienta lleno de vida</div>
+          </span>
+          <span style="--i:5">
+            <img src="./img/homeroymarge.jpg" alt="">
+            <div class="message">Te necesito para que me cuides, para que me aguantes</div>
+          </span>
+          <span style="--i:6">
+            <img src="./img/rio.png" alt="">
+            <div class="message">Tus ojos son hermosos</div>
+          </span>
+          <span style="--i:7">
+            <img src="./img/up.jpg" alt="">
+            <div class="message">Tú y yo somos parte del club</div>
+          </span>
+          <span style="--i:8">
+            <img src="./img/lluviadehamburguesas.jpg" alt="">
+            <div class="message">Me gustas de gustar</div>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 5 -->
+    <section class="content-section cita-section">
+      <h2>¿Quieres que tengamos una cita? 💖</h2>
+      <div class="cita-buttons">
+        <button id="btn-si">Sí</button>
+        <button id="btn-no">No</button>
+      </div>
+    
+      <!-- Formulario oculto -->
+      <form id="cita-form" class="hidden" method="POST" action="https://formsubmit.co/jhsmu0104@gmail.com">
+        <label for="fecha">📅 Elige la fecha:</label>
+        <input type="date" name="fecha" id="fecha" required>
+    
+        <label for="mensaje">💌 Mensaje o recomendación:</label>
+        <textarea name="mensaje" id="mensaje" rows="3" placeholder="¿Qué quieres hacer?"></textarea>
+    
+        <!-- Eliminamos el _next -->
+        <input type="hidden" name="_captcha" value="false">
+    
+        <button type="submit" class="enviar">Enviar</button>
+      </form>
+    
+      <!-- Mensaje de agradecimiento oculto -->
+      <div id="gracias" class="hidden">
+        <h3>✅ Gracias por tu respuesta</h3>
+        <p>Te responderemos tan pronto como nos llegue 💌</p>
+      </div>
+    </section>
+    
+    
+  </main>
+  <script>
+    const btnNo = document.getElementById("btn-no");
+    const btnSi = document.getElementById("btn-si");
+    const form = document.getElementById("cita-form");
+    const gracias = document.getElementById("gracias");
+  
+    // 🔥 Botón NO se escapa (desktop y móvil)
+    function moverBoton() {
+      const x = Math.floor(Math.random() * 200) - 100;
+      const y = Math.floor(Math.random() * 200) - 100;
+      btnNo.style.transform = `translate(${x}px, ${y}px)`;
+    }
+    btnNo.addEventListener("mouseover", moverBoton);
+    btnNo.addEventListener("touchstart", moverBoton);
+  
+    // 🔥 Confirmaciones en bucle si logra dar click en "No"
+    btnNo.addEventListener("click", (e) => {
+      e.preventDefault();
+      let seguro = confirm("😏 ¿Segur@ que no quieres una cita?");
+      if(seguro) seguro = confirm("🙄 ¿De verdad estás segur@?");
+      if(seguro) seguro = confirm("😢 Última oportunidad, ¿seguro?");
+      if(seguro) alert("Bueno... yo sé que en el fondo quieres decir que sí ❤️");
+    });
+  
+    // 🔥 Mostrar formulario al dar clic en "Sí"
+    btnSi.addEventListener("click", () => {
+      form.style.display = "flex";
+      btnSi.style.display = "none";
+      btnNo.style.display = "none";
+    });
+  
+    // 🔥 Interceptar envío del formulario y mostrar gracias
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+  
+      // Enviar a FormSubmit
+      await fetch(form.action, {
+        method: "POST",
+        body: data
+      });
+  
+      // Ocultar form y mostrar mensaje
+      form.style.display = "none";
+      gracias.classList.remove("hidden");
+    });
+  </script>
+  
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // Flips
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+      });
+    });
+
+    // Animaciones Lottie
+    lottie.loadAnimation({
+      container: document.getElementById("ramo3-animation"),
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      path: "img/ramoFlores.json"
+    });
+
+    lottie.loadAnimation({
+      container: document.getElementById("ramo1-animation"),
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      path: "img/ramoFlores.json"
+    });
+
+    lottie.loadAnimation({
+      container: document.getElementById("ramo2-animation"),
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      path: "img/ramoFlores.json"
+    });
+  </script>
+</body>
+</html>
+<!-- Lottie Web -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+
+<script>
+    lottie.loadAnimation({
+      container: document.getElementById("cake-animation"),
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      path: "img/cake.json" // archivo local en tu carpeta
+    });
+    
+  </script>
