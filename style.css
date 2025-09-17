@@ -61,7 +61,7 @@
     transform: translateY(-4px);
   }
   
-  .content-section h1,
+  .content-section .mensaje,
   .content-section h2 {
     font-size: clamp(1.4rem, 4vw, 2rem);
     margin-bottom: 0.6rem;
@@ -238,22 +238,22 @@
   }
 
   /* Imagen 1 */
-  .block1 .part1 .front { background-image: url("./img/son_goku.jpg"); background-position: 0% 0%; }
-  .block1 .part2 .front { background-image: url("./img/son_goku.jpg"); background-position: 100% 0%; }
-  .block1 .part3 .front { background-image: url("./img/son_goku.jpg"); background-position: 0% 100%; }
-  .block1 .part4 .front { background-image: url("./img/son_goku.jpg"); background-position: 100% 100%; }
+  .block1 .part1 .front { background-image: url("./img/cuadricula.jpg"); background-position: 0% 0%; }
+  .block1 .part2 .front { background-image: url("./img/cuadricula.jpg"); background-position: 100% 0%; }
+  .block1 .part3 .front { background-image: url("./img/cuadricula.jpg"); background-position: 0% 100%; }
+  .block1 .part4 .front { background-image: url("./img/cuadricula.jpg"); background-position: 100% 100%; }
 
   /* Imagen 2 */
-  .block2 .part1 .front { background-image: url("./img/son_goku1.jpg"); background-position: 0% 0%; }
-  .block2 .part2 .front { background-image: url("./img/son_goku1.jpg"); background-position: 100% 0%; }
-  .block2 .part3 .front { background-image: url("./img/son_goku1.jpg"); background-position: 0% 100%; }
-  .block2 .part4 .front { background-image: url("./img/son_goku1.jpg"); background-position: 100% 100%; }
+  .block2 .part1 .front { background-image: url("./img/la_de_ella.jpg"); background-position: 0% 0%; }
+  .block2 .part2 .front { background-image: url("./img/la_de_ella.jpg"); background-position: 100% 0%; }
+  .block2 .part3 .front { background-image: url("./img/la_de_ella.jpg"); background-position: 0% 100%; }
+  .block2 .part4 .front { background-image: url("./img/la_de_ella.jpg"); background-position: 100% 100%; }
 
   /* Imagen 3 */
-  .block3 .part1 .front { background-image: url("./img/sun_jin_woo.jpg"); background-position: 0% 0%; }
-  .block3 .part2 .front { background-image: url("./img/sun_jin_woo.jpg"); background-position: 100% 0%; }
-  .block3 .part3 .front { background-image: url("./img/sun_jin_woo.jpg"); background-position: 0% 100%; }
-  .block3 .part4 .front { background-image: url("./img/sun_jin_woo.jpg"); background-position: 100% 100%; }
+  .block3 .part1 .front { background-image: url("./img/foto_ella_cuadro.jpg"); background-position: 0% 0%; }
+  .block3 .part2 .front { background-image: url("./img/foto_ella_cuadro.jpg"); background-position: 100% 0%; }
+  .block3 .part3 .front { background-image: url("./img/foto_ella_cuadro.jpg"); background-position: 0% 100%; }
+  .block3 .part4 .front { background-image: url("./img/foto_ella_cuadro.jpg"); background-position: 100% 100%; }
 
   /* Sección de animaciones Lottie */
   .animations {
@@ -543,3 +543,144 @@
   from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
 }
+
+
+   /* Estilo del diario */
+    .book {
+      position: relative;
+      width: 320px;
+      height: 420px;
+      perspective: 1500px;
+      
+    }
+
+    .book-section {
+      display: flex;               /* activa flexbox solo aquí */
+      justify-content: center;     /* centra horizontal */
+      align-items: center;         /* centra vertical */
+                 /* para que ocupe toda la pantalla */
+    }
+    
+
+    .page {
+      width: 100%;
+      height: 100%;
+      background: white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform-origin: left center;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 1s ease;
+    }
+
+    /* Cada página en distinta capa */
+    #p0  { z-index: 17; }
+    #p1  { z-index: 16; }
+    #p2  { z-index: 15; }
+    #p3  { z-index: 14; }
+    #p4  { z-index: 13; }
+    #p5  { z-index: 12; }
+    #p6  { z-index: 11; }
+    #p7  { z-index: 10; }
+    #p8  { z-index: 9; }
+    #p9  { z-index: 8; }
+    #p10 { z-index: 7; }
+    #p11 { z-index: 6; }
+    #p12 { z-index: 5; }
+    #p13 { z-index: 4; }
+    #p14 { z-index: 3; }
+    #p15 { z-index: 2; }
+    #p16 { z-index: 1; }
+
+    /* Portada y contraportada */
+    .cover {
+      background: linear-gradient(135deg, #27548A, #1d3c66);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .cover h1 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .cover img {
+      width: 100px;
+      border-radius: 20%;
+      border: 2px solid white;
+      margin-bottom: 1rem;
+    }
+
+    .cover p {
+      font-size: 0.9rem;
+      max-width: 80%;
+    }
+
+    /* Contenido de páginas */
+    .page-content {
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente */
+  text-align: justify;     /* texto justificado */
+}
+
+.page h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  text-align: center; /* el título centrado arriba */
+}
+
+.page .titulo_diario{
+  color: #0b1220;
+}
+
+.page p {
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.5;
+  text-align: justify; /* párrafos justificados */
+}
+
+    /* Controles */
+    .controls {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      margin: 0.3rem;
+      border: none;
+      border-radius: 5px;
+      background: #27548A;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #1d3c66;
+    }
+
+    /* Responsivo */
+    @media (max-width: 480px) {
+      .book {
+        width: 260px;
+        height: 360px;
+      }
+      .cover h1 { font-size: 1.2rem; }
+      .cover p, .page p { font-size: 0.8rem; }
+    }
+    .cover p{
+      color: #f0f0f0;
+      text-align: justify;
+    }
