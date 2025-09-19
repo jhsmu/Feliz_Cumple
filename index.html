@@ -6,6 +6,7 @@
   <title>🎂 Feliz Cumpleaños Para Ti 🎉</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <!-- Fondo -->
   <canvas id="stars-canvas"></canvas>
@@ -225,6 +226,21 @@
     
     
   </main>
+  <audio id="miAudio" src="audio/talk.mp4" autoplay loop></audio>
+<button id="btnAudio" class="audio-btn">🔊</button>
+<script>
+const audio = document.getElementById("miAudio");
+const btn = document.getElementById("btnAudio");
+
+// Iniciar audio automáticamente al cargar (puede pedir interacción del usuario)
+audio.play().catch(()=>{});
+
+// Toggle mute/unmute
+btn.addEventListener("click", () => {
+  audio.muted = !audio.muted;
+  btn.textContent = audio.muted ? "🔇" : "🔊";
+});
+</script>
   <script>
     const btnNo = document.getElementById("btn-no");
     const btnSi = document.getElementById("btn-si");
